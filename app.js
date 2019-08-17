@@ -59,8 +59,7 @@ app.get("/", function(req, res) {
                 dictionary.word = $("div.dDoNo span").first().text();
 
                 if (!$('.lr_dct_spkr.lr_dct_spkr_off audio')) {
-                    dictionary.pronunciation = "https:" + $('.lr_dct_spkr.lr_dct_spkr_off audio')[0].attribs.src;
-                    dictionary.pronunciation = dictionary.pronunciation.replace('--_gb', '--_us');
+                    dictionary.pronunciation = $('audio source').src;
                 }
 
                 dictionary.phonetic = [];
