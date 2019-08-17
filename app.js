@@ -58,7 +58,7 @@ app.get("/", function(req, res) {
 
                 dictionary.word = $("div.dDoNo span").first().text();
 
-                if (!$('.lr_dct_spkr.lr_dct_spkr_off audio')) {
+                if (!$('audio source').src) {
                     dictionary.pronunciation = $('audio source').src;
                 }
 
